@@ -1,9 +1,18 @@
-public class Dollar {
-	int amount = 10;
+class Dollar {
+	int amount;
 	
-	Dollar(int amount) {}
+	Dollar(int amount) {
+		this.amount = amount;
+	}
 	
-	void times(int multiplier) {}
+	Dollar times(int multiplier) {
+		return new Dollar(amount = amount * multiplier);
+	}
+	
+	public boolean equals(Object object)  {
+	   Dollar dollar = (Dollar) object;
+	   return amount == dollar.amount;
+	}
 }
 
 
